@@ -7,20 +7,17 @@
     <title>Document</title>
     <style>
         .highlight{
-            background-color: blue;
-            color: white;
+        animation: glowing 3000ms infinite;
+        color: white;
         }
         .button1{
             background-color: green;
             color: white;
             position: relative;
             border-style: none;
+            cursor: pointer;
         }
-        .button1:hover {
-            background-color: black;
-            color: white;
-            border-style: none;
-        }
+
         .button1:active .hide {
             opacity: 1;
             background-color: rgb(241, 241, 241);
@@ -38,7 +35,28 @@
             opacity: 0;
             pointer-events: none;
         }
-
+        
+        
+        /* glowing button code*/
+        @keyframes glowing {
+            0% {
+                background-color: #2ba805;
+                box-shadow: 0 0 3px #2ba805;
+            }
+            50% {
+                background-color: #49e819;
+                box-shadow: 0 0 10px #49e819;
+            }
+            100% {
+                background-color: #2ba805;
+                box-shadow: 0 0 3px #2ba805;
+            }
+        }
+        
+        .button1:hover {
+        animation: glowing 2000ms infinite;
+        }
+        
 
     </style>
 </head>
