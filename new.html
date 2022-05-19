@@ -28,7 +28,7 @@
         }
 
         /*part 1/1 word color button with cursor change*/
-        .button1{
+        .button1 {
             background-color: green;
             color: white;
             position: relative;
@@ -36,34 +36,32 @@
             cursor: pointer;
         }
         /*Part 1/3 button .hide setting for pc web*/
-        .button1:focus .hide {
+        .button1:focus .hide{
             opacity: 1;
-            background-color: rgb(241, 241, 241);
-            color: black;
-            width: max-content;
-            text-align: left;
             z-index: 200;
+            width: max-content;
         }
         
         /*Part 2/3 button .hide setting for tablet web*/
-        .button1:active .hide {
+        .button1:active .hide{
             opacity: 1;
-            background-color: rgb(241, 241, 241);
-            color: black;
-            width: max-content;
-            text-align: left;
             z-index: 200;
+            width: max-content;
         }
-        /*Part 3/3 button .hide setting for tablet web*/
-        .hide{
-            position: absolute;
-            opacity: 0;
-            pointer-events: none;
+        /*button glowing*/
+        .button1:focus {
+        animation: glowing 2000ms infinite;
         }
-        /*Part 1/4 NAV*/
-        .sectionNAVtotal{
+        .button1:hover {
+        animation: glowing 2000ms infinite;
+        }
+
+        /*Part 3/3 1/4 hide section*/
+        .hide {
         display: flex;
-        flex-direction: row;
+        position: absolute;
+        opacity: 0;
+        pointer-events: none;
         }
 
         /*Part 2/4 NAV*/
@@ -128,88 +126,172 @@
 </head>
 <body>
 
-<section class="sectionNAVtotal">
-    
+ 
 
-<section class="sectionNAV1">
-    <section>
-        <div class="navSize0">Nhóm</div>
-        <div class="navSize1">
-        Sáu<br>
-        實thật<br>
-        詞từ:<br>
-        </div>
-        <div class="navSize2">
-        Sáu<br>
-        虛hư<br>
-        詞từ:<br>
-        </div>
-    </section> 
-    <section>  
-        <div class="navSize-1">Mười hai loại từ</div>
-        <div>1 名danh詞từ</div>
-        <div>2 代đại詞từ</div>
-        <div>3 動động詞từ</div>
-        <div>4 形hình容dung詞từ</div>
-        <div>5 數số詞từ</div>
-        <div>6 量lượng詞từ</div>
-        <div>7 副phó詞từ</div>
-        <div>8 介giới詞từ</div>
-        <div>9 連liên詞từ</div>
-        <div>10 助trợ詞từ</div>
-        <div>11 嘆thán詞từ</div>
-        <div>12 擬nghĩ聲thanh詞từ</div>
+<button class="button1">象meow1
+    <section class="hide">
+    <section class="sectionNAV1">
+        <section>
+            <div class="navSize0">Nhóm</div>
+            <div class="navSize1">
+            Sáu<br>
+            實thật<br>
+            詞từ:<br>
+            </div>
+            <div class="navSize2">
+            Sáu<br>
+            虛hư<br>
+            詞từ:<br>
+            </div>
+        </section> 
+        <section>  
+            <div class="navSize-1">Mười hai loại từ</div>
+            <div>1 名danh詞từ</div>
+            <div>2 代đại詞từ</div>
+            <div>3 動động詞từ</div>
+            <div class="highlight">4 形hình容dung詞từ</div>
+            <div>5 數số詞từ</div>
+            <div>6 量lượng詞từ</div>
+            <div>7 副phó詞từ</div>
+            <div>8 介giới詞từ</div>
+            <div>9 連liên詞từ</div>
+            <div>10 助trợ詞từ</div>
+            <div>11 嘆thán詞từ</div>
+            <div>12 擬nghĩ聲thanh詞từ</div>
+        </section>
     </section>
-</section>
-<section class="sectionNAV2">
-    <section>
-        <div class="navSize0">Nhóm</div>
-        <div class="navSize-2"><img class="componentPosition" src="componentPosition/1 Left to right.svg" alt="1 Left to right"></div>
-        <div class="navSize-3"><img class="componentPosition" src="componentPosition/2 Above to below.svg" alt="2 Above to below"></div>
-        <div class="navSize-2"><img class="componentPosition" src="componentPosition/3 Left to middle and right.svg" alt="3 Left to middle and right"></div>
-        <div class="navSize-3"><img class="componentPosition" src="componentPosition/4 Above to middle and below.svg" alt="4 Above to middle and below"></div>
-        <div class="navSize-2"><img class="componentPosition" src="componentPosition/5 Full surround.svg" alt="5 Full surround"></div>
-        <div class="navSize-3"><img class="componentPosition" src="componentPosition/6 Surround from above.svg" alt="6 Surround from above"></div>
-        <div class="navSize-2"><img class="componentPosition" src="componentPosition/7 Surround from below.svg" alt="7 Surround from below"></div>
-        <div class="navSize-3"><img class="componentPosition" src="componentPosition/8 Surround from left.svg" alt="8 Surround from left"></div>
-        <div class="navSize-2"><img class="componentPosition" src="componentPosition/9 Surround from upper left.svg" alt="9 Surround from upper left"></div>
-        <div class="navSize-3"><img class="componentPosition" src="componentPosition/10 Surround from upper right.svg" alt="10 Surround from upper right"></div>
-        <div class="navSize-2"><img class="componentPosition" src="componentPosition/11 Surround from lower left.svg" alt="11 Surround from lower left.svg"></div>
-        <div class="navSize-3"><img class="componentPosition" src="componentPosition/12 Overlaid.svg" alt="12 Overlaid"></div>
+    <section class="sectionNAV2">
+        <section>
+            <div class="navSize0">Nhóm</div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/1 Left to right.svg" alt="1 Left to right"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/2 Above to below.svg" alt="2 Above to below"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/3 Left to middle and right.svg" alt="3 Left to middle and right"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/4 Above to middle and below.svg" alt="4 Above to middle and below"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/5 Full surround.svg" alt="5 Full surround"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/6 Surround from above.svg" alt="6 Surround from above"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/7 Surround from below.svg" alt="7 Surround from below"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/8 Surround from left.svg" alt="8 Surround from left"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/9 Surround from upper left.svg" alt="9 Surround from upper left"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/10 Surround from upper right.svg" alt="10 Surround from upper right"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/11 Surround from lower left.svg" alt="11 Surround from lower left.svg"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/12 Overlaid.svg" alt="12 Overlaid"></div>
+        </section>
+        <section>
+            <div class="navSize-1">Biểu tượng thành phần</div>
+            <div>1 trái sang phải</div>
+            <div>2 trên xuống dưới</div>
+            <div>3 trái sang giữa và phải</div>
+            <div>4 trên sang giữa và dưới</div>
+            <div>5 toàn bộ vòm</div>
+            <div class="highlight">6 bao quanh từ trên</div>
+            <div>7 bao quanh từ dưới</div>
+            <div>8 bao quanh từ trái</div>
+            <div>9 bao quanh từ trên trái</div>
+            <div>10 bao quanh từ trên phải</div>
+            <div>11 bao quanh từ dưới trái</div>
+            <div>12 chồng lên</div>
+        </section>
     </section>
-    <section>
-        <div class="navSize-1">Biểu tượng thành phần</div>
-        <div>1 trái sang phải</div>
-        <div>2 trên xuống dưới</div>
-        <div>3 trái sang giữa và phải</div>
-        <div>4 trên sang giữa và dưới</div>
-        <div>5 toàn bộ vòm</div>
-        <div>6 bao quanh từ trên</div>
-        <div>7 bao quanh từ dưới</div>
-        <div>8 bao quanh từ trái</div>
-        <div>9 bao quanh từ trên trái</div>
-        <div>10 bao quanh từ trên phải</div>
-        <div>11 bao quanh từ dưới trái</div>
-        <div>12 chồng lên</div>
+    <section class="sectionNAV3">
+            <div class="navSize-1">Sáu phương pháp tạo từ Hán</div>
+            <div class="navSize-2">Hai phương pháp cơ bản:</div>
+            <div>1 象tượng形hình</div>
+            <div class="highlight">2 指chỉ事sự</div>
+            <div class="navSize-2">Hai phương pháp kết hợp:</div>
+            <div>3 會hội意ý</div>
+            <div>4 形hình聲thanh</div>
+            <div class="navSize-2">Hai phương thức chuyển:</div>
+            <div>5 假giả借tá</div>
+            <div>6 轉chuyển注chú</div>
+            <div class="navSize-1">Phương Pháp Hình Thành</div>
+            <div class="highlight">象tượng形hình: 女 phụ nữ</div>
+            <div class="highlight">+象tượng形hình: 子 đứa trẻ</div>
     </section>
-</section>
-<section class="sectionNAV3">
-        <div class="navSize-1">Sáu phương pháp tạo từ Hán</div>
-        <div class="navSize-2">Hai phương pháp cơ bản:</div>
-        <div>1 象tượng形hình</div>
-        <div>2 指chỉ事sự</div>
-        <div class="navSize-2">Hai phương pháp kết hợp:</div>
-        <div>3 會hội意ý</div>
-        <div>4 形hình聲thanh</div>
-        <div class="navSize-2">Hai phương thức chuyển:</div>
-        <div>5 假giả借tá</div>
-        <div>6 轉chuyển注chú</div>
-        <div class="navSize-1">Phương Pháp Hình Thành</div>
-        <div>象tượng形hình: 女 phụ nữ</div>
-        <div>+象tượng形hình: 子 đứa trẻ</div>
+    </section>
+</button>
 
-</section>
+<button class="button1">象meow1
+    <section class="hide">
+    <section class="sectionNAV1">
+        <section>
+            <div class="navSize0">Nhóm</div>
+            <div class="navSize1">
+            Sáu<br>
+            實thật<br>
+            詞từ:<br>
+            </div>
+            <div class="navSize2">
+            Sáu<br>
+            虛hư<br>
+            詞từ:<br>
+            </div>
+        </section> 
+        <section>  
+            <div class="navSize-1">Mười hai loại từ</div>
+            <div>1 名danh詞từ</div>
+            <div>2 代đại詞từ</div>
+            <div>3 動động詞từ</div>
+            <div>4 形hình容dung詞từ</div>
+            <div>5 數số詞từ</div>
+            <div>6 量lượng詞từ</div>
+            <div>7 副phó詞từ</div>
+            <div>8 介giới詞từ</div>
+            <div class="highlight">9 連liên詞từ</div>
+            <div>10 助trợ詞từ</div>
+            <div>11 嘆thán詞từ</div>
+            <div>12 擬nghĩ聲thanh詞từ</div>
+        </section>
+    </section>
+    <section class="sectionNAV2">
+        <section>
+            <div class="navSize0">Nhóm</div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/1 Left to right.svg" alt="1 Left to right"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/2 Above to below.svg" alt="2 Above to below"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/3 Left to middle and right.svg" alt="3 Left to middle and right"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/4 Above to middle and below.svg" alt="4 Above to middle and below"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/5 Full surround.svg" alt="5 Full surround"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/6 Surround from above.svg" alt="6 Surround from above"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/7 Surround from below.svg" alt="7 Surround from below"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/8 Surround from left.svg" alt="8 Surround from left"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/9 Surround from upper left.svg" alt="9 Surround from upper left"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/10 Surround from upper right.svg" alt="10 Surround from upper right"></div>
+            <div class="navSize-2"><img class="componentPosition" src="componentPosition/11 Surround from lower left.svg" alt="11 Surround from lower left.svg"></div>
+            <div class="navSize-3"><img class="componentPosition" src="componentPosition/12 Overlaid.svg" alt="12 Overlaid"></div>
+        </section>
+        <section>
+            <div class="navSize-1">Biểu tượng thành phần</div>
+            <div>1 trái sang phải</div>
+            <div>2 trên xuống dưới</div>
+            <div class="highlight">3 trái sang giữa và phải</div>
+            <div>4 trên sang giữa và dưới</div>
+            <div>5 toàn bộ vòm</div>
+            <div>6 bao quanh từ trên</div>
+            <div>7 bao quanh từ dưới</div>
+            <div>8 bao quanh từ trái</div>
+            <div>9 bao quanh từ trên trái</div>
+            <div>10 bao quanh từ trên phải</div>
+            <div>11 bao quanh từ dưới trái</div>
+            <div>12 chồng lên</div>
+        </section>
+    </section>
+    <section class="sectionNAV3">
+            <div class="navSize-1">Sáu phương pháp tạo từ Hán</div>
+            <div class="navSize-2">Hai phương pháp cơ bản:</div>
+            <div>1 象tượng形hình</div>
+            <div>2 指chỉ事sự</div>
+            <div class="navSize-2">Hai phương pháp kết hợp:</div>
+            <div>3 會hội意ý</div>
+            <div class="highlight">4 形hình聲thanh</div>
+            <div class="navSize-2">Hai phương thức chuyển:</div>
+            <div>5 假giả借tá</div>
+            <div>6 轉chuyển注chú</div>
+            <div class="navSize-1">Phương Pháp Hình Thành</div>
+            <div class="highlight">象tượng形hình: 女 phụ nữ</div>
+            <div class="highlight">+象tượng形hình: 子 đứa trẻ</div>
+    </section>
+    </section>
+</button>
 
-</section> 
+
 </body>
 </html>
