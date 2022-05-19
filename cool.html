@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+div{
+text-align: left;}
+
+.hide {
+position: fixed;
+display: flex;
+opacity: 0;
+pointer-events: none;}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }}
+.highlight {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonBlue {
+background-color: blue;
+color: white;
+border-style: none;
+cursor: pointer;}
+.buttonBlue:focus .hide {
+opacity: 1;
+z-index: 200;
+width: max-content;
+position: fixed;
+left: 0;
+bottom: 0;}
+.buttonBlue:active .hide {
+opacity: 1;
+z-index: 200;
+width: max-content;
+position: fixed;
+left: 0;
+bottom: 0;}
+.buttonBlue:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonBlue:active {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonBlue:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonRed {
+background-color: red;
+color: white;
+border-style: none;
+cursor: pointer;}
+.buttonRed:focus .hide {
+opacity: 1;
+z-index: 200;
+width: max-content;
+position: fixed;
+left: 0;
+bottom: 0;}
+.buttonRed:active .hide {
+opacity: 1;
+z-index: 200;
+width: max-content;
+position: fixed;
+left: 0;
+bottom: 0;}
+.buttonRed:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonRed:active {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonRed:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+
+
+
+    </style>
+</head>
+<body>
+    <button class="buttonBlue">Button<div class="hide">
+        
+        <div class="highlight">
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        </div>
+    </div></button>
+
+    <button class="buttonRed">Button<div class="hide">
+        
+        <div class="highlight">
+        xxxxxxxxxxxxxxxxxxxxxxx<br>
+        xxxxxxxxxxxxxxxxxxxxxxx<br>
+        xxxxxxxxxxxxxxxxxxxxxxx<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        asdasfsdagasdgfdgsdfgsdfgsdfg<br>
+        </div>
+    </div></button>
+</body>
+</html>
