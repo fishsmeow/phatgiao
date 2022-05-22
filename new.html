@@ -1,409 +1,743 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Complete Layout</title>
-    <style>
-        body{
-            overflow: hidden;
-        }
-        /* Part 1/2 glowing button code*/
-        @keyframes glowing {
-            0% {
-                background-color: #2ba805;
-                box-shadow: 0 0 3px #2ba805;
-            }
-            50% {
-                background-color: #49e819;
-                box-shadow: 0 0 10px #49e819;
-            }
-            100% {
-                background-color: #2ba805;
-                box-shadow: 0 0 3px #2ba805;
-            }
-        }
-        /* Part 2/2glowing every 2s infinite time*/
-        .highlight{
-        animation: glowing 2000ms infinite;
-        color: white;
-        }
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Document</title>
+<style>
+@keyframes animate {
+0% {background-position: 0%;}
+100% {background-position: 400%;}}
+.highlight {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;
+color: white;}
 
-        /*part 1/1 word color button with cursor change*/
-        .button1 {
-            background-color: green;
-            color: white;
-            border-style: none;
-            cursor: pointer;
-        }
-        /*Part 1/3 button .hide setting for pc web*/
+.buttonBlueWhite {
+background-color: #4285f4;
+color: white;
+cursor: pointer;}
+.buttonBlueWhite:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonBlueWhite:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonBlueWhite:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonBlueWhite:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
 
-        .button1:focus .hide{
-            opacity: 1;
-            z-index: 200;
-            width: max-content;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-        }
-        .button1:active .hide{
-            opacity: 1;
-            z-index: 200;
-            width: max-content;
-            position: fixed;
-            left: 0;
-            bottom: 0;
-        }
-        
-        /*Part 2/3 button .hide setting for tablet web*/
+.buttonBlueBlack {
+background-color: #4285f4;
+color: black;
+cursor: pointer;}
+.buttonBlueBlack:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonBlueBlack:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonBlueBlack:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonBlueBlack:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
 
-        /*button glowing*/
-        .button1:focus {
-        animation: glowing 2000ms infinite;
-        }
-        .button1:hover {
-        animation: glowing 2000ms infinite;
-        }
+.buttonRedWhite {
+background-color: #ea4335;
+color: white;
+cursor: pointer;}
+.buttonRedWhite:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonRedWhite:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonRedWhite:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonRedWhite:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
 
-        /*Part 3/3 1/4 hide section*/
-        .hide {
-        display: flex;
-        opacity: 0;
-        pointer-events: none;
-        }
+.buttonRedBlack {
+background-color: #ea4335;
+color: black;
+cursor: pointer;}
+.buttonRedBlack:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonRedBlack:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonRedBlack:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonRedBlack:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
 
-        /*Part 2/4 NAV*/
-        .sectionNAV1 {
-        display: flex;
-        }
+.buttonGreenWhite {
+background-color: #34a853;
+color: white;
+cursor: pointer;}
+.buttonGreenWhite:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonGreenWhite:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonGreenWhite:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonGreenWhite:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
 
-        /*Part 3/4 NAV*/
-        .sectionNAV2 {
-        display: flex;
-        margin-left: 4px;
-        }
-        .sectionNAV3 {
-        display: flex;
-        flex-direction: column;
-        margin-left: 4px;
-        }
+.buttonGreenBlack {
+background-color: #34a853;
+color: black;
+cursor: pointer;}
+.buttonGreenBlack:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonGreenBlack:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonGreenBlack:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonGreenBlack:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
 
-       
-        /*Part 4/4 NAV*/
-        div {
-        padding: 4px;
-        border-style: none;
-        height: 20px;
-        background-color: rgb(200, 200, 200);
-        }
-/*NAV*/
-        .navSize0 {
-        background-color: rgb(60, 60, 60);
-        color: white;
-        }
-        .navSize1 {
-        height: 160px;
-        background-color: rgb(100, 100, 100);
-        color: white;
-        }
-        .navSize2 {
-        height: 160px;
-        background-color: rgb(140, 140, 140);
-        color: white;
-        }
-        .navSize-1 {
-        background-color: rgb(15, 15, 15);
-        color: white;
-        }
-        .navSize-2 {
-        background-color: rgb(140, 140, 140);
-        color: white;
-        }
-        .navSize-3 {
-        background-color: rgb(180, 180, 180);
-        }
-        
-/*NAV*/
-        /*1/1 image component position size*/
-        .componentPosition{
-        height: 16px;
-        }
-    </style> 
+.buttonWhiteGYellow {
+background-color: white;
+color: #fbbc04;
+cursor: pointer;}
+.buttonWhiteGYellow:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonWhiteGYellow:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonWhiteGYellow:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonWhiteGYellow:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonYellowGWhite {
+background-color: #fbbc04;
+color: white;
+cursor: pointer;}
+.buttonYellowGWhite:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonYellowGWhite:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonYellowGWhite:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonYellowGWhite:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonWhiteGPurple {
+background-color: white;
+color: #9900ff;
+cursor: pointer;}
+.buttonWhiteGPurple:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonWhiteGPurple:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonWhiteGPurple:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonWhiteGPurple:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonPurpleGWhite {
+background-color: #9900ff;
+color: white;
+cursor: pointer;}
+.buttonPurpleGWhite:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonPurpleGWhite:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonPurpleGWhite:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonPurpleGWhite:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonWhiteGCyan {
+background-color: white;
+color: #46bdc6;
+cursor: pointer;}
+.buttonWhiteGCyan:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonWhiteGCyan:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonWhiteGCyan:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonWhiteGCyan:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+.buttonCyanGWhite {
+background-color: #46bdc6;
+color: white;
+cursor: pointer;}
+.buttonCyanGWhite:focus .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonCyanGWhite:active .hide {
+opacity: 1;
+z-index: 200;
+left: 0;
+bottom: 16px;}
+.buttonCyanGWhite:focus {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+.buttonCyanGWhite:hover {
+background: linear-gradient(90deg, #3401cc,#2e2c75,#68397f,#c20072,#f80120,#ef5d22,#3db54b,#009a90);
+background-size: 400%;
+animation: animate 8s linear infinite;}
+
+button {
+width: 80px;
+font-size: 14px;
+height: 20px;
+
+padding: 0px;
+margin: -2px;
+
+text-align: center;
+vertical-align: middle;
+
+border-style: solid;
+border-color: black;
+border-width: 1px;}
+
+.hide {
+position: fixed;
+opacity: 0;
+pointer-events: none;}
+
+.z0 {
+width: 100%;
+display: flex;
+flex-direction: row;
+flex-wrap: wrap;
+
+position: fixed;
+bottom: 16px;
+left: 0;
+
+max-height: 440px;
+text-align: left;
+font-size: 13px;}
+.z1 {
+border-style: solid;
+border-color:black;
+border-width: 1px;0;
+
+flex: 1;
+max-height: 200px;
+min-width: 150px;}
+.z2 {
+width: 150px;
+height: 200px;
+align-items: center;
+border-style: solid;
+border-color:black;
+border-width: 1px;}
+.z3 {
+width: 150px;
+height: 200px;
+
+border-style: solid;
+border-color:black;
+border-width: 1px;}
+.z4 {
+flex: 1;
+max-height: 200px;
+min-width: 150px;
+}
 
 
+.bottomBar {
+background-color: black;
+color: white;
+height: 16px;
+font-size: 16px;
+width: 100%;
+
+position: fixed;
+bottom: 0;
+left: 0;}
+
+
+
+.z1{
+display: flex;
+flex-direction: column;}
+.z1z1{
+height: 16px;
+background-color: black;
+color:white;}
+.z1z2{
+background-color: white;
+color: black;}
+
+.z2{
+display: flex;
+flex-direction: column;
+color: black;
+background-color: white;}
+.z3{
+display: flex;
+flex-direction: column;}
+.z3z1{
+display: flex;
+flex-direction: column;
+background-color: white;
+color: black;}
+.z3z1z5{
+display: flex;
+flex-direction: row;
+justify-content: space-around;}
+.z3z1z6{
+display: flex;
+flex-direction: row;
+justify-content: space-around;}
+.z3z2{
+display: flex;
+flex-direction: column;
+background-color: white;
+color:black;}
+.z3z2z1{
+background-color: black;
+color: white;}
+.z3z2z3{
+background-color: black;
+color: white;}
+.z3z2z5{
+background-color: black;
+color: white;}
+
+.z4 {
+background-color: white;
+color: black;}
+.z4z1{
+height: 16px;
+background-color: black;
+color:white;}
+
+</style>
 </head>
 <body>
+<button class="buttonCyanGWhite">形nghiêng
 
- 
+<div class="hide">
+<div class="z0">
 
-<button class="button1">象meow1
-    <section class="hide">
-    <section class="sectionNAV1">
-        <section>
-            <div class="navSize0">Nhóm</div>
-            <div class="navSize1">
-            Sáu<br>
-            實thật<br>
-            詞từ:<br>
-            </div>
-            <div class="navSize2">
-            Sáu<br>
-            虛hư<br>
-            詞từ:<br>
-            </div>
-        </section> 
-        <section>  
-            <div class="navSize-1">Mười hai loại từ</div>
-            <div>1 名danh詞từ</div>
-            <div>2 代đại詞từ</div>
-            <div>3 動động詞từ</div>
-            <div class="highlight">4 形hình容dung詞từ</div>
-            <div>5 數số詞từ</div>
-            <div>6 量lượng詞từ</div>
-            <div>7 副phó詞từ</div>
-            <div>8 介giới詞từ</div>
-            <div>9 連liên詞từ</div>
-            <div>10 助trợ詞từ</div>
-            <div>11 嘆thán詞từ</div>
-            <div>12 擬nghĩ聲thanh詞từ</div>
-        </section>
-    </section>
-    <section class="sectionNAV2">
-        <section>
-            <div class="navSize0">Nhóm</div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/1 Left to right.svg" alt="1 Left to right"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/2 Above to below.svg" alt="2 Above to below"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/3 Left to middle and right.svg" alt="3 Left to middle and right"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/4 Above to middle and below.svg" alt="4 Above to middle and below"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/5 Full surround.svg" alt="5 Full surround"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/6 Surround from above.svg" alt="6 Surround from above"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/7 Surround from below.svg" alt="7 Surround from below"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/8 Surround from left.svg" alt="8 Surround from left"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/9 Surround from upper left.svg" alt="9 Surround from upper left"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/10 Surround from upper right.svg" alt="10 Surround from upper right"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/11 Surround from lower left.svg" alt="11 Surround from lower left.svg"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/12 Overlaid.svg" alt="12 Overlaid"></div>
-        </section>
-        <section>
-            <div class="navSize-1">Biểu tượng thành phần</div>
-            <div>1 trái sang phải</div>
-            <div>2 trên xuống dưới</div>
-            <div>3 trái sang giữa và phải</div>
-            <div>4 trên sang giữa và dưới</div>
-            <div>5 toàn bộ vòm</div>
-            <div class="highlight">6 bao quanh từ trên</div>
-            <div>7 bao quanh từ dưới</div>
-            <div>8 bao quanh từ trái</div>
-            <div>9 bao quanh từ trên trái</div>
-            <div>10 bao quanh từ trên phải</div>
-            <div>11 bao quanh từ dưới trái</div>
-            <div>12 chồng lên</div>
-        </section>
-    </section>
-    <section class="sectionNAV3">
-            <div class="navSize-1">Sáu phương pháp tạo từ Hán</div>
-            <div class="navSize-2">Hai phương pháp cơ bản:</div>
-            <div>1 象tượng形hình</div>
-            <div class="highlight">2 指chỉ事sự</div>
-            <div class="navSize-2">Hai phương pháp kết hợp:</div>
-            <div>3 會hội意ý</div>
-            <div>4 形hình聲thanh</div>
-            <div class="navSize-2">Hai phương thức chuyển:</div>
-            <div>5 假giả借tá</div>
-            <div>6 轉chuyển注chú</div>
-            <div class="navSize-1">Phương Pháp Hình Thành</div>
-            <div class="highlight">象tượng形hình: 女 phụ nữ</div>
-            <div class="highlight">+象tượng形hình: 子 đứa trẻ</div>
-    </section>
-    </section>
-</button>
+<div class="z1">
+<div class="z1z1">象 Unicode: U+5B50</div>
+<div class="z1z2">
+1. (Danh) Tiếng.
+<br>2. (Danh) Đời xưa chia ra năm thứ tiếng là “cung, thương, giốc, chủy, vũ”
+<br>3. (Danh) Tiếng người chia ra bốn thứ tiếng là “bình, thượng, khứ, nhập”
+<br>4. (Danh) Âm nhạc.
+<br>5. (Danh) Lời nói.
+<br>6. (Danh) Tin tức, âm hao. 
+<br>7. (Danh) Tiếng tăm, danh dự.
+<br>8. (Động) Nêu rõ, tuyên bố. 
+</div>
+</div>
 
-<button class="button1">象meow2
-    <section class="hide">
-    <section class="sectionNAV1">
-        <section>
-            <div class="navSize0">Nhóm</div>
-            <div class="navSize1">
-            Sáu<br>
-            實thật<br>
-            詞từ:<br>
-            </div>
-            <div class="navSize2">
-            Sáu<br>
-            虛hư<br>
-            詞từ:<br>
-            </div>
-        </section> 
-        <section>  
-            <div class="navSize-1">Mười hai loại từ</div>
-            <div>1 名danh詞từ</div>
-            <div>2 代đại詞từ</div>
-            <div>3 動động詞từ</div>
-            <div>4 形hình容dung詞từ</div>
-            <div>5 數số詞từ</div>
-            <div>6 量lượng詞từ</div>
-            <div>7 副phó詞từ</div>
-            <div>8 介giới詞từ</div>
-            <div class="highlight">9 連liên詞từ</div>
-            <div>10 助trợ詞từ</div>
-            <div>11 嘆thán詞từ</div>
-            <div>12 擬nghĩ聲thanh詞từ</div>
-        </section>
-    </section>
-    <section class="sectionNAV2">
-        <section>
-            <div class="navSize0">Nhóm</div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/1 Left to right.svg" alt="1 Left to right"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/2 Above to below.svg" alt="2 Above to below"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/3 Left to middle and right.svg" alt="3 Left to middle and right"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/4 Above to middle and below.svg" alt="4 Above to middle and below"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/5 Full surround.svg" alt="5 Full surround"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/6 Surround from above.svg" alt="6 Surround from above"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/7 Surround from below.svg" alt="7 Surround from below"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/8 Surround from left.svg" alt="8 Surround from left"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/9 Surround from upper left.svg" alt="9 Surround from upper left"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/10 Surround from upper right.svg" alt="10 Surround from upper right"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/11 Surround from lower left.svg" alt="11 Surround from lower left.svg"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/12 Overlaid.svg" alt="12 Overlaid"></div>
-        </section>
-        <section>
-            <div class="navSize-1">Biểu tượng thành phần</div>
-            <div>1 trái sang phải</div>
-            <div>2 trên xuống dưới</div>
-            <div class="highlight">3 trái sang giữa và phải</div>
-            <div>4 trên sang giữa và dưới</div>
-            <div>5 toàn bộ vòm</div>
-            <div>6 bao quanh từ trên</div>
-            <div>7 bao quanh từ dưới</div>
-            <div>8 bao quanh từ trái</div>
-            <div>9 bao quanh từ trên trái</div>
-            <div>10 bao quanh từ trên phải</div>
-            <div>11 bao quanh từ dưới trái</div>
-            <div>12 chồng lên</div>
-        </section>
-    </section>
-    <section class="sectionNAV3">
-            <div class="navSize-1">Sáu phương pháp tạo từ Hán</div>
-            <div class="navSize-2">Hai phương pháp cơ bản:</div>
-            <div>1 象tượng形hình</div>
-            <div>2 指chỉ事sự</div>
-            <div class="navSize-2">Hai phương pháp kết hợp:</div>
-            <div>3 會hội意ý</div>
-            <div class="highlight">4 形hình聲thanh</div>
-            <div class="navSize-2">Hai phương thức chuyển:</div>
-            <div>5 假giả借tá</div>
-            <div>6 轉chuyển注chú</div>
-            <div class="navSize-1">Phương Pháp Hình Thành</div>
-            <div class="highlight">象tượng形hình: 女 phụ nữ</div>
-            <div class="highlight">+象tượng形hình: 子 đứa trẻ</div>
-    </section>
-    </section>
-</button>
+<div class="z2">
+<div class="z2z1"><img src="/old/子-order.gif" height="80px"></div>
+<div class="z2z2">
+<div class="z2z2z1">1 象tượng形hình</div>
+<div class="z2z2z2">2 指chỉ事sự</div>
+<div class="highlight">3 會hội意ý</div>
+<div class="z2z2z4">4 形hình聲thanh</div>
+<div class="z2z2z5">5 假giả借tá</div>
+<div class="z2z2z6">6 轉chuyển注chú</div>
+</div></div>
 
-<button>象meow3</button>
-<button>象meow4</button>
-<button>象meow5</button>
-<button>象meow6</button>
-<button>象meow7</button>
-<button>象meow8</button>
-<button>象meow9</button>
-<button>象meow10</button>
-<button>象meow11</button>
-<button>象meow12</button>
-<button>象meow13</button>
-<button>象meow14</button>
-<button>象meow15</button>
-<button>象meow16</button>
-<button>象meow17</button>
-<button>象meow18</button>
-<button>象meow19</button>
-<button>象meow20</button>
-<button>象meow21</button>
-<button>象meow22</button>
-<button>象meow23</button>
+<div class="z3">
+<div class="z3z1">
+<div class="z3z1z1">Hán: tí, tý, tử</div>
+<div class="z3z1z2">Nôm: tí, tở, tử</div>
+<div class="z3z1z3">Mandarin: zǐ</div>
+<div class="z3z1z4">Cantonese: jí</div>
+<div class="z3z1z5">
+<div class="⬚">⬚</div>
+<div class="⿰">⿰</div>
+<div class="⿱">⿱</div>
+<div class="highlight">⿲</div>
+<div class="⿳">⿳</div>
+<div class="⿴">⿴</div>
+<div class="⿻">⿻</div>
+</div>
+<div class="z3z1z6">
+<div class="⿵">⿵</div>
+<div class="⿶">⿶</div>
+<div class="⿷">⿷</div>
+<div class="⿸">⿸</div>
+<div class="⿹">⿹</div>
+<div class="⿺">⿺</div>
+<div class="△">△</div>
+</div>
 
-<button class="button1">象meow28<section class="hide">
-    <section class="sectionNAV1">
-        <section>
-            <div class="navSize0">Nhóm</div>
-            <div class="navSize1">
-            Sáu<br>
-            實thật<br>
-            詞từ:<br>
-            </div>
-            <div class="navSize2">
-            Sáu<br>
-            虛hư<br>
-            詞từ:<br>
-            </div>
-        </section> 
-        <section>  
-            <div class="navSize-1">Mười hai loại từ</div>
-            <div>1 名danh詞từ</div>
-            <div>2 代đại詞từ</div>
-            <div>3 動động詞từ</div>
-            <div>4 形hình容dung詞từ</div>
-            <div>5 數số詞từ</div>
-            <div>6 量lượng詞từ</div>
-            <div>7 副phó詞từ</div>
-            <div>8 介giới詞từ</div>
-            <div class="highlight">9 連liên詞từ</div>
-            <div>10 助trợ詞từ</div>
-            <div>11 嘆thán詞từ</div>
-            <div>12 擬nghĩ聲thanh詞từ</div>
-        </section>
-    </section>
-    <section class="sectionNAV2">
-        <section>
-            <div class="navSize0">Nhóm</div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/1 Left to right.svg" alt="1 Left to right"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/2 Above to below.svg" alt="2 Above to below"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/3 Left to middle and right.svg" alt="3 Left to middle and right"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/4 Above to middle and below.svg" alt="4 Above to middle and below"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/5 Full surround.svg" alt="5 Full surround"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/6 Surround from above.svg" alt="6 Surround from above"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/7 Surround from below.svg" alt="7 Surround from below"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/8 Surround from left.svg" alt="8 Surround from left"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/9 Surround from upper left.svg" alt="9 Surround from upper left"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/10 Surround from upper right.svg" alt="10 Surround from upper right"></div>
-            <div class="navSize-2"><img class="componentPosition" src="componentPosition/11 Surround from lower left.svg" alt="11 Surround from lower left.svg"></div>
-            <div class="navSize-3"><img class="componentPosition" src="componentPosition/12 Overlaid.svg" alt="12 Overlaid"></div>
-        </section>
-        <section>
-            <div class="navSize-1">Biểu tượng thành phần</div>
-            <div>1 trái sang phải</div>
-            <div>2 trên xuống dưới</div>
-            <div class="highlight">3 trái sang giữa và phải</div>
-            <div>4 trên sang giữa và dưới</div>
-            <div>5 toàn bộ vòm</div>
-            <div>6 bao quanh từ trên</div>
-            <div>7 bao quanh từ dưới</div>
-            <div>8 bao quanh từ trái</div>
-            <div>9 bao quanh từ trên trái</div>
-            <div>10 bao quanh từ trên phải</div>
-            <div>11 bao quanh từ dưới trái</div>
-            <div>12 chồng lên</div>
-        </section>
-    </section>
-    <section class="sectionNAV3">
-            <div class="navSize-1">Sáu phương pháp tạo từ Hán</div>
-            <div class="navSize-2">Hai phương pháp cơ bản:</div>
-            <div>1 象tượng形hình</div>
-            <div>2 指chỉ事sự</div>
-            <div class="navSize-2">Hai phương pháp kết hợp:</div>
-            <div>3 會hội意ý</div>
-            <div class="highlight">4 形hình聲thanh</div>
-            <div class="navSize-2">Hai phương thức chuyển:</div>
-            <div>5 假giả借tá</div>
-            <div>6 轉chuyển注chú</div>
-            <div class="navSize-1">Phương Pháp Hình Thành</div>
-            <div class="highlight">象tượng形hình: 女 phụ nữ</div>
-            <div class="highlight">+象tượng形hình: 子 đứa trẻ</div>
-    </section>
-    </section>
-</button>
+<div class="z3z2">
+<div class="z3z2z1">Trái: 象tượng形hình </div>
+<div class="z3z2z2">女[nữ] phụ nữ</div>
+<div class="z3z2z3">Phải: 象tượng形hình</div>
+<div class="z3z2z4">子[tử] đứa trẻ</div>
+<div class="z3z2z5">Dưới:</div>
+<div class="z3z2z6">meow</div>
+</div></div></div>
 
-v
+<div class="z4">
+<div class="z4z1">Ý nghĩa phía sau từ:</div>
+<div class="z4z2">
+<div class="z4z2z1">
+However, broader interpretations of
+However, broader interpretations of
+However, broader interpretations of
+However, broader interpretations of 
+However, broader interpretations of
+However, broader interpretations of
+However, broader interpretations of
+However, broader interpretations of 
+However, broader interpretations of
+However, broader interpretations of
+However, broader interpretations of
+However, broader interpretations of </div>
+</div></div></div></div></button>
+
+<button class="buttonPurpleGWhite">之chi
+
+<div class="hide">
+<div class="z0">
+
+<div class="z1">
+<div class="z1z1">Unicode: U+4E4B</div>
+<div class="z1z2">1. (Giới) Của, thuộc về.
+2. (Giới) Đối với (dùng như 於).
+3. (Giới) Ở chỗ (tương đương với “chư” 諸, “chi ư” 之於).
+4. (Liên) Và, với (dùng như “dữ” 與, “cập” 及).
+5. (Liên) Mà (dùng như “nhi” 而).
+6. (Liên) Thì (dùng như “tắc” 則).
+7. (Liên) Nếu, như quả. 
+8. (Động) Đi.
+9. (Động) Đến.
+10. (Động) Là, chính là.
+11. (Động) Dùng. 
+12. (Đại) Đấy, đó, kia (tiếng dùng thay một danh từ). 
+13. (Trợ) Dùng để nhấn mạnh.
+14. (Danh) Họ “Chi”.
+</div>
+</div>
+
+<div class="z2">
+<div class="z2z1"><img src="之.gif" height="80px"></div>
+<div class="z2z2">
+<div >1 象tượng形hình</div>
+<div >2 指chỉ事sự</div>
+<div class="highlight">3 會hội意ý</div>
+<div >4 形hình聲thanh</div>
+<div >5 假giả借tá</div>
+<div >6 轉chuyển注chú</div>
+</div></div>
+
+<div class="z3">
+<div class="z3z1">
+<div class="z3z1z1">Hán: chi</div>
+<div class="z3z1z2">Nôm: chi, gì, giây</div>
+<div class="z3z1z3">Mandarin: zhī</div>
+<div class="z3z1z4">Cantonese: zi1</div>
+<div class="z3z1z5">
+<div >⬚</div>
+<div >⿰</div>
+<div class="highlight">⿱</div>
+<div >⿲</div>
+<div >⿳</div>
+<div >⿴</div>
+<div >⿻</div>
+</div>
+<div class="z3z1z6">
+<div >⿵</div>
+<div >⿶</div>
+<div >⿷</div>
+<div >⿸</div>
+<div >⿹</div>
+<div >⿺</div>
+<div >△</div>
+</div>
+
+<div class="z3z2">
+<div class="z3z2z1">Trên: 象tượng形hình </div>
+<div class="z3z2z2">止[chi ] Chân</div>
+<div class="z3z2z3">Dưới: 指chỉ事sự</div>
+<div class="z3z2z4">一[nhất] bắt đầu</div>
+<div class="z3z2z5">...</div>
+<div class="z3z2z6">...</div>
+</div></div></div>
+
+<div class="z4">
+<div class="z4z1">Ý nghĩa phía sau từ:</div>
+<div class="z4z2">
+<div class="z4z2z1">Mô tả ngắn gọn: Dòng chữ oracle bone ""之chi"" có nghĩa là bàn chân (ám chỉ con người) rời khỏi nơi đó và bước về phía trước. Ý nghĩa ban đầu là đi.
+
+<br><br>Giải thích chi tiết: Chữ khắc trên xương, đi từ ""止 dừng"" đến ""一 một"", ""dừng"" giống như bàn chân của người hướng ra ngoài, ""一 một"" giống như mặt đất, chỉ chân hướng về phía trước, rời khỏi nguyên quán sẽ đi đến một nơi nào đó . Nghĩa ban đầu của ""之chi"" là đi, ""Erya. Tạm dịch: ""Chính là, đi.""</div>
+</div></div></div></div></button>
+
+<button class="buttonPurpleGWhite">之chi
+
+<div class="hide">
+<div class="z0">
+
+<div class="z1">
+<div class="z1z1">Unicode: U+4E4B</div>
+<div class="z1z2">1. (Giới) Của, thuộc về.
+2. (Giới) Đối với (dùng như 於).
+3. (Giới) Ở chỗ (tương đương với “chư” 諸, “chi ư” 之於).
+4. (Liên) Và, với (dùng như “dữ” 與, “cập” 及).
+5. (Liên) Mà (dùng như “nhi” 而).
+6. (Liên) Thì (dùng như “tắc” 則).
+7. (Liên) Nếu, như quả. 
+8. (Động) Đi.
+9. (Động) Đến.
+10. (Động) Là, chính là.
+11. (Động) Dùng. 
+12. (Đại) Đấy, đó, kia (tiếng dùng thay một danh từ). 
+13. (Trợ) Dùng để nhấn mạnh.
+14. (Danh) Họ “Chi”.
+</div>
+</div>
+
+<div class="z2">
+<div class="z2z1"><img src="/character/之.gif" height="80px"></div>
+<div class="z2z2">
+<div >1 象tượng形hình</div>
+<div >2 指chỉ事sự</div>
+<div class="highlight">3 會hội意ý</div>
+<div >4 形hình聲thanh</div>
+<div >5 假giả借tá</div>
+<div >6 轉chuyển注chú</div>
+</div></div>
+
+<div class="z3">
+<div class="z3z1">
+<div class="z3z1z1">Hán: chi</div>
+<div class="z3z1z2">Nôm: chi, gì, giây</div>
+<div class="z3z1z3">Mandarin: zhī</div>
+<div class="z3z1z4">Cantonese: zi1</div>
+<div class="z3z1z5">
+<div >⬚</div>
+<div >⿰</div>
+<div class="highlight">⿱</div>
+<div >⿲</div>
+<div >⿳</div>
+<div >⿴</div>
+<div >⿻</div>
+</div>
+<div class="z3z1z6">
+<div >⿵</div>
+<div >⿶</div>
+<div >⿷</div>
+<div >⿸</div>
+<div >⿹</div>
+<div >⿺</div>
+<div >△</div>
+</div>
+
+<div class="z3z2">
+<div class="z3z2z1">Trên: 象tượng形hình </div>
+<div class="z3z2z2">止[chi ] Chân</div>
+<div class="z3z2z3">Dưới: 指chỉ事sự</div>
+<div class="z3z2z4">一[nhất] bắt đầu</div>
+<div class="z3z2z5">...</div>
+<div class="z3z2z6">...</div>
+</div></div></div>
+
+<div class="z4">
+<div class="z4z1">Ý nghĩa phía sau từ:</div>
+<div class="z4z2">
+<div class="z4z2z1">Mô tả ngắn gọn: Dòng chữ oracle bone ""之chi"" có nghĩa là bàn chân (ám chỉ con người) rời khỏi nơi đó và bước về phía trước. Ý nghĩa ban đầu là đi.
+
+<br><br>Giải thích chi tiết: Chữ khắc trên xương, đi từ ""止 dừng"" đến ""一 một"", ""dừng"" giống như bàn chân của người hướng ra ngoài, ""一 một"" giống như mặt đất, chỉ chân hướng về phía trước, rời khỏi nguyên quán sẽ đi đến một nơi nào đó . Nghĩa ban đầu của ""之chi"" là đi, ""Erya. Tạm dịch: ""Chính là, đi.""</div>
+</div></div></div></div></button>
+
+
+
+<button class="buttonPurpleGWhite">之chi
+
+    <div class="hide">
+    <div class="z0">
+    
+    <div class="z1">
+    <div class="z1z1">Unicode: U+4E4B</div>
+    <div class="z1z2">1. (Giới) Của, thuộc về.
+    <br>2. (Giới) Đối với (dùng như 於).
+    <br>3. (Giới) Ở chỗ (tương đương với “chư” 諸, “chi ư” 之於).
+    <br>4. (Liên) Và, với (dùng như “dữ” 與, “cập” 及).
+    <br>5. (Liên) Mà (dùng như “nhi” 而).
+    <br>6. (Liên) Thì (dùng như “tắc” 則).
+    <br>7. (Liên) Nếu, như quả. 
+    <br>8. (Động) Đi.
+    <br>9. (Động) Đến.
+    <br>10. (Động) Là, chính là.
+    <br>11. (Động) Dùng. 
+    <br>12. (Đại) Đấy, đó, kia (tiếng dùng thay một danh từ). 
+    <br>13. (Trợ) Dùng để nhấn mạnh.
+    <br>14. (Danh) Họ “Chi”.
+    </div>
+    </div>
+    
+    <div class="z2">
+    <div class="z2z1"><img src="/character/之.gif" height="80px"></div>
+    <div class="z2z2">
+    <div >1 象tượng形hình</div>
+    <div >2 指chỉ事sự</div>
+    <div class="highlight">3 會hội意ý</div>
+    <div >4 形hình聲thanh</div>
+    <div >5 假giả借tá</div>
+    <div >6 轉chuyển注chú</div>
+    </div></div>
+    
+    <div class="z3">
+    <div class="z3z1">
+    <div class="z3z1z1">Hán: chi</div>
+    <div class="z3z1z2">Nôm: chi, gì, giây</div>
+    <div class="z3z1z3">Mandarin: zhī</div>
+    <div class="z3z1z4">Cantonese: zi1</div>
+    <div class="z3z1z5">
+    <div >⬚</div>
+    <div >⿰</div>
+    <div class="highlight">⿱</div>
+    <div >⿲</div>
+    <div >⿳</div>
+    <div >⿴</div>
+    <div >⿻</div>
+    </div>
+    <div class="z3z1z6">
+    <div >⿵</div>
+    <div >⿶</div>
+    <div >⿷</div>
+    <div >⿸</div>
+    <div >⿹</div>
+    <div >⿺</div>
+    <div >△</div>
+    </div>
+    
+    <div class="z3z2">
+    <div class="z3z2z1">Trên: 象tượng形hình </div>
+    <div class="z3z2z2">止[chi ] Chân</div>
+    <div class="z3z2z3">Dưới: 指chỉ事sự</div>
+    <div class="z3z2z4">一[nhất] bắt đầu</div>
+    <div class="z3z2z5">...</div>
+    <div class="z3z2z6">...</div>
+    </div></div></div>
+    
+    <div class="z4">
+    <div class="z4z1">Ý nghĩa phía sau từ:</div>
+    <div class="z4z2">
+    <div class="z4z2z1">Mô tả ngắn gọn: Dòng chữ oracle bone ""之chi"" có nghĩa là bàn chân (ám chỉ con người) rời khỏi nơi đó và bước về phía trước. Ý nghĩa ban đầu là đi.
+    
+    <br><br>Giải thích chi tiết: Chữ khắc trên xương, đi từ ""止 dừng"" đến ""一 một"", ""dừng"" giống như bàn chân của người hướng ra ngoài, ""一 một"" giống như mặt đất, chỉ chân hướng về phía trước, rời khỏi nguyên quán sẽ đi đến một nơi nào đó . Nghĩa ban đầu của ""之chi"" là đi, ""Erya. Tạm dịch: ""Chính là, đi.""</div>
+    </div></div></div></div></button>
+<div class="bottomBar">[Bấm/giữ chữ] để hiện, [bấm/lại 1 click] vào chữ để thoát.</div>
 </body>
 </html>
